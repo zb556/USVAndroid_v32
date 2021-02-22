@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_title_osmdroid_maps">
+        <ListPreference
+            android:defaultValue="satellite"
+            android:entries="@array/OsmMapTypes"
+            android:entryValues="@array/OsmMapTypeValues"
+            android:key="pref_osmdroid_map_type"
+            android:summary="@string/pref_map_type_summary"
+            android:title="@string/pref_map_type"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

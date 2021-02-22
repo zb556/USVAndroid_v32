@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<usb>
+	<usb-device vendor-id="4292" product-id="60000" /><!-- 云卓UVC CP210x UART Bridge -->
+<!--	<usb-device class="239" subclass="2" />	&lt;!&ndash; all device of UVC &ndash;&gt;-->
+</usb>

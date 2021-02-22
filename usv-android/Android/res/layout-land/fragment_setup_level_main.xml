@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/textViewDesc"
+            style="@style/ModeDetailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mode_desc_rectangle"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="点击“水平校准”，开始校准水平。开始校准过程之前确保控制器放置在平坦表面上。"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:id="@+id/buttonStep"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@drawable/button_green_drawable"
+            android:layout_centerInParent="true"
+            style="@style/modeControl"
+            android:text="水平校准"/>
+
+    </RelativeLayout>
+</LinearLayout>

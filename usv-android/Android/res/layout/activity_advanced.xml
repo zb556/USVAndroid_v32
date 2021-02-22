@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_params"
+        android:text="@string/screen_parameters"
+        android:drawableLeft="@drawable/ic_menu_parameters_grey600_24dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_checklist"
+        android:text="@string/screen_checklist"
+        android:drawableLeft="@drawable/ic_menu_checklist_grey600_24dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_imu_calibration"
+        android:text="@string/setup_imu_title"
+        android:drawableLeft="@drawable/ic_menu_calibration_grey600_24dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_compass_calibration"
+        android:text="@string/setup_mag_title"
+        android:drawableLeft="@drawable/ic_action_compass"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_rc_calibration"
+        android:text="遥控器校准"
+        android:drawableLeft="@drawable/ic_menu_calibration_grey600_24dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/advance_level_calibration"
+        android:text="水平校准"
+        android:drawableLeft="@drawable/ic_menu_calibration_grey600_24dp"
+        android:layout_marginLeft="5dp"/>
+</LinearLayout>
+

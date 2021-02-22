@@ -1,0 +1,85 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        kotlin_version = '1.2.70'
+
+        play_services_version = '9.4.0'
+        support_lib_version = '28.0.0'
+        okhttp_version = '2.5.0'
+
+        android_build_sdk_version = 28
+        android_build_tools_version = '28.0.3'
+        android_build_target_sdk_version = 28
+        android_build_min_sdk_version = 18
+        // 添加googlePlayServicesVersion
+        googlePlayServicesVersion = '16.+'
+    }
+
+    repositories {
+        google()
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+        jcenter()
+        maven { url 'http://s3.amazonaws.com/fabric-artifacts/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'io.fabric.tools:gradle:1.25.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        //Dexcount gradle plugin
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.2'
+    }
+}
+
+def getMavenUsername(){
+    return hasProperty('COM_O3DR_MAVEN_USERNAME') ? COM_O3DR_MAVEN_USERNAME : ''
+}
+
+def getMavenApiKey(){
+    return hasProperty('COM_O3DR_MAVEN_APIKEY') ? COM_O3DR_MAVEN_APIKEY : ''
+}
+
+def getMavenRepoUrl(){
+    return hasProperty('COM_O3DR_MAVEN_REPO_URL') ? COM_O3DR_MAVEN_REPO_URL :
+            'https://dl.bintray.com/3d-robotics/maven'
+}
+
+def computeVersionCode(int versionMajor, int versionMinor, int versionPatch, int versionBuild = 0){
+    return versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+}
+
+def generateVersionName(String versionPrefix, int versionMajor, int versionMinor, int versionPatch, String versionSuffix = ""){
+    def versionName = "${versionPrefix}${versionMajor}.${versionMinor}.${versionPatch}"
+
+    if(versionSuffix != null && !versionSuffix.isEmpty() && versionSuffix != "release"){
+        versionName += "-${versionSuffix}"
+    }
+
+    return versionName
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+        jcenter()
+        maven {
+            url getMavenRepoUrl()
+            credentials {
+                username getMavenUsername()
+                password getMavenApiKey()
+            }
+        }
+
+        maven { url 'http://s3.amazonaws.com/fabric-artifacts/public' }
+
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}

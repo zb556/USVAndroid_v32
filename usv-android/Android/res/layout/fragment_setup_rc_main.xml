@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/configLayout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="3dp">
+
+        <ProgressBar
+            android:id="@+id/fillBar_throttle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_thickness"
+            android:layout_height="@dimen/fillbar_length"
+            android:max="3000"
+            android:progress="1000"
+            android:progressDrawable="@drawable/progress_drawable_vertical"
+            android:layout_alignTop="@+id/stickLeft"
+            android:layout_alignBottom="@+id/stickLeft"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/stickLeft"/>
+
+        <Button
+            android:id="@+id/stickLeft"
+            android:layout_width="@dimen/setup_rc_stick_width"
+            android:layout_height="@dimen/setup_rc_stick_height"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/thr_yaw_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fillBar_yaw"
+            android:layout_below="@+id/fillBar_yaw"
+            android:layout_marginTop="8dp"
+            android:text="Throttle: 1000\nYaw: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_yaw"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_below="@+id/stickLeft"
+            android:layout_marginTop="25dp"
+            android:layout_alignLeft="@+id/stickLeft"
+            android:layout_alignRight="@+id/stickLeft"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="3dp">
+
+        <ProgressBar
+            android:id="@+id/fillBar_pitch"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_thickness"
+            android:layout_height="@dimen/fillbar_length"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_vertical"
+            android:layout_alignTop="@+id/stickRight"
+            android:layout_alignBottom="@+id/stickRight"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/stickRight"/>
+
+        <Button
+            android:id="@+id/stickRight"
+            android:layout_width="@dimen/setup_rc_stick_width"
+            android:layout_height="@dimen/setup_rc_stick_height"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/roll_pitch_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fillBar_roll"
+            android:layout_below="@+id/fillBar_roll"
+            android:layout_marginTop="8dp"
+            android:text="Roll: 1500\nPitch: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_roll"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_alignLeft="@+id/stickRight"
+            android:layout_below="@+id/stickRight"
+            android:layout_alignRight="@+id/stickRight"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_5"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_5_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 5: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_6"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_6_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 6: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_7"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_7_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 7: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_8"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_8_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 8: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_9"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_9_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 9: 1500"
+            />
+        <ProgressBar
+            android:id="@+id/fillBar_ch_10"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_10_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 10: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_11"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_11_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 11: 1500"
+            />
+
+        <ProgressBar
+            android:id="@+id/fillBar_ch_12"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/fillbar_length"
+            android:layout_height="@dimen/fillbar_thickness"
+            android:max="3000"
+            android:progress="1500"
+            android:progressDrawable="@drawable/progress_drawable_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_12_text"
+            style="@style/rc_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ch 12: 1500"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8">
+        <Button
+            android:id="@+id/calibrateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green_drawable"
+            android:layout_centerInParent="true"
+            style="@style/modeControl"
+            android:text="校准遥控器" />
+    </LinearLayout>
+</LinearLayout>

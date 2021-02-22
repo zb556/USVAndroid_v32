@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <integer name="vehiclesColCount">1</integer>
+    <integer name="time_bar_default">3</integer>
+    <integer name="time_bar_max">10</integer>
+    <integer name="time_bar_min">0</integer>
+    <integer name="servo_bar_default">1100</integer>
+    <integer name="servo_bar_max">2000</integer>
+    <integer name="servo_bar_min">1000</integer>
+</resources>
